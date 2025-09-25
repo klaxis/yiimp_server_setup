@@ -10,7 +10,7 @@
 if [ ! -d $HOME/yiimpserver/yiimp_multi ]; then
 	echo Downloading Dirty Harry Yiimp Multi Server Installer V1.0. . .
 	git clone \
-		https://github.com/DirtyHarryDev/server_yiimp_multi \
+		https://github.com/klaxis/server_yiimp_multi \
 		$HOME/yiimpserver/yiimp_multi \
 		< /dev/null 2> /dev/null
 
