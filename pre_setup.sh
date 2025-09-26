@@ -75,20 +75,20 @@ fi
 # Get the IP addresses of the local network interface(s) that are connected
 # to the Internet. We need these when we want to have services bind only to
 # the public network interfaces (not loopback, not tunnel interfaces).
- if [ -z "$PRIVATE_IP" ]; then
- DEFAULT_PRIVATE_IP=$(get_default_privateip 4)
- input_box "Private IP Address (Optional)" \
- "Enter the private IP address of this machine, as given to you by your ISP.
- \n\nLeave as your public IP if the machine does not have a private IP address.
- \n\nPrivate IP address:" \
- $DEFAULT_PRIVATE_IP \
+# if [ -z "$PRIVATE_IP" ]; then
+# DEFAULT_PRIVATE_IP=$(get_default_privateip 4)
+# input_box "Private IP Address (Optional)" \
+# "Enter the private IP address of this machine, as given to you by your ISP.
+# \n\nLeave as your public IP if the machine does not have a private IP address.
+# \n\nPrivate IP address:" \
+# $DEFAULT_PRIVATE_IP \
 # PRIVATE_IP
 
-  if [ -z "$PRIVATE_IP" ]; then
- user hit ESC/cancel
- exit
-  fi
- fi
+#  if [ -z "$PRIVATE_IP" ]; then
+# user hit ESC/cancel
+# exit
+#  fi
+# fi
 
 # Automatic configuration, e.g. as used in our Vagrant configuration.
 if [ "$PUBLIC_IP" = "auto" ]; then
